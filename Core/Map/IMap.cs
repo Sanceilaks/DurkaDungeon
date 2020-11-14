@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DurkaDungeon.Core.Types;
 
 namespace DurkaDungeon.Core.Map
 {
@@ -13,6 +14,8 @@ namespace DurkaDungeon.Core.Map
 
         IPoint GetPoint(string id);
         void SetPoint(IPoint oldPoint, IPoint newPoint);
+
+        Size GetSize();
     }
 
 
@@ -21,10 +24,13 @@ namespace DurkaDungeon.Core.Map
     {
         private bool isGenerated = false;
         private List<IPoint> points;
+        private Size size;
 
         bool IMap.Generate(int mapSizeX, int mapSizeY)
         {
             points = new List<IPoint>();
+            size = new Size(mapSizeX, mapSizeY);
+
             int mapSize = mapSizeX * mapSizeY; //   S = x * y
 
             int x; int y = 1; int last_n = 0;
@@ -84,6 +90,11 @@ namespace DurkaDungeon.Core.Map
             }
 
             return null;
+        }
+
+        Size IMap.GetSize()
+        {
+            return size;
         }
 
         bool IMap.isGenerated()

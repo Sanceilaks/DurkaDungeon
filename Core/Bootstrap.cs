@@ -27,7 +27,10 @@ namespace DurkaDungeon.Core
 
             InitConsole("DurkaDungeon");
             map = new Map.BaseMap();
-            map.Generate(100, 100);
+            map.Generate(20, 10);
+
+            /*Console.BufferWidth = map.GetSize().X;
+            Console.BufferHeight = map.GetSize().Y;*/
 
             Console.WriteLine("Init successfully");
             Console.WriteLine("Wait 3 seconds");

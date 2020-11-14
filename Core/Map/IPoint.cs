@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DurkaDungeon.Core.Types;
 
 namespace DurkaDungeon.Core.Map
 {
-    class Position
-    {
-        public int X { get; set; }
-        public int Y { get; set; }
-    }
-
-
     interface IPoint
     {
         //string id { get; set; }
