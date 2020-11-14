@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.Json;
 using DurkaDungeon.Core;
-
+using DurkaDungeon.Core.Events;
 
 namespace DurkaDungeon
 {
@@ -17,20 +17,16 @@ namespace DurkaDungeon
 
             gameMap.Init();
 
+            EventManager eventManager = new EventManager(gameMap);
 
             while (true)
             {
                 gameMap.Draw();
 
-                var key = Console.ReadKey();
-
-                if (key.Key == ConsoleKey.RightArrow)
-                    gameMap.GetLocalPlayer().Position.X += 1;
+                eventManager.Pull();
 
                 Console.Clear();
             }
-            
-
         }
     }
 }

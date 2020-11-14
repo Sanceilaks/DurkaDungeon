@@ -4,17 +4,7 @@ using System.Text;
 
 namespace DurkaDungeon.Core.Entitys
 {
-    interface IEntity
-    {
-        public char DrawChar { get; }
-
-        public string Id { get; }
-
-    }
-
-
-
-    class BaseEntity : IEntity
+    class BaseEntity
     {
         static protected int entNum = 0;
 
@@ -26,8 +16,8 @@ namespace DurkaDungeon.Core.Entitys
         public bool IsVisible { get; set; }  = false;
         public bool IsTakePart { get; set; } = false;
         public Core.Types.Position Position { get; set; }
-
         public string Id { get; }
+        public Core.Map.GameMap GameMap { get; set; }
 
         public BaseEntity()
         {
@@ -47,11 +37,39 @@ namespace DurkaDungeon.Core.Entitys
             Position = position;
             entNum++;
         }
+
         public BaseEntity(Core.Types.Position position)
         {
             Position = position;
             Id = random.Next().ToString();
             entNum++;
+        }
+
+
+        /// <summary>
+        /// Move entity
+        /// 
+        /// 
+        ///  <code>
+        /// For exemple:
+        ///   ****
+        ///   *P**
+        ///   ****
+        /// For move up-right  - new Position(1, 1);
+        /// For move left-down - new Position(-1, -1);
+        /// </code>
+        /// </summary>
+        public void Move(Types.Position position)
+        {
+            if (this.Position.X + position.X > GameMap.GetMap().GetSize().X ||
+                this.Position.X + position.X < 0)
+                return;
+            if (this.Position.Y + position.Y > GameMap.GetMap().GetSize().Y ||
+                this.Position.Y + position.Y < 0)
+                return;
+
+            this.Position.X += position.X;
+            this.Position.Y += position.Y;
         }
     }
 }

@@ -27,6 +27,7 @@ namespace DurkaDungeon.Core.Map
         public void Init()
         {
             localPlayer = new LocalPlayer(new Position(1, 1));
+            localPlayer.GameMap = this;
 
             AddEntity(localPlayer);
         }
