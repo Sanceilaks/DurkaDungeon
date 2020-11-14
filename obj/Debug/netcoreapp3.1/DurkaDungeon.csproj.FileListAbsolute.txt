@@ -1,0 +1,13 @@
+D:\VSP\cs\DurkaDungeon\bin\Debug\netcoreapp3.1\DurkaDungeon.exe
+D:\VSP\cs\DurkaDungeon\bin\Debug\netcoreapp3.1\DurkaDungeon.deps.json
+D:\VSP\cs\DurkaDungeon\bin\Debug\netcoreapp3.1\DurkaDungeon.runtimeconfig.json
+D:\VSP\cs\DurkaDungeon\bin\Debug\netcoreapp3.1\DurkaDungeon.runtimeconfig.dev.json
+D:\VSP\cs\DurkaDungeon\bin\Debug\netcoreapp3.1\DurkaDungeon.dll
+D:\VSP\cs\DurkaDungeon\bin\Debug\netcoreapp3.1\DurkaDungeon.pdb
+D:\VSP\cs\DurkaDungeon\obj\Debug\netcoreapp3.1\DurkaDungeon.csprojAssemblyReference.cache
+D:\VSP\cs\DurkaDungeon\obj\Debug\netcoreapp3.1\DurkaDungeon.AssemblyInfoInputs.cache
+D:\VSP\cs\DurkaDungeon\obj\Debug\netcoreapp3.1\DurkaDungeon.AssemblyInfo.cs
+D:\VSP\cs\DurkaDungeon\obj\Debug\netcoreapp3.1\DurkaDungeon.csproj.CoreCompileInputs.cache
+D:\VSP\cs\DurkaDungeon\obj\Debug\netcoreapp3.1\DurkaDungeon.dll
+D:\VSP\cs\DurkaDungeon\obj\Debug\netcoreapp3.1\DurkaDungeon.pdb
+D:\VSP\cs\DurkaDungeon\obj\Debug\netcoreapp3.1\DurkaDungeon.genruntimeconfig.cache
